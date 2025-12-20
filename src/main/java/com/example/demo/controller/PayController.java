@@ -20,5 +20,10 @@ public class PayController {
 	public String processPayment(@RequestBody  String payId) {
 	return 	payService.processPayment(payId);
 	}
+	
+	@PostMapping("/paymnetRefund")
+	public String paymnetRefund(@RequestBody  String payId) {
+	return 	"refunded";
+	}
 
 }

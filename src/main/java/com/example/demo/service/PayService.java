@@ -8,6 +8,6 @@ public class PayService {
 	
 	public String processPayment(String payMode) {
 		System.out.print("payment service called");
-		return "Paid Successfully";
+		return "Failed";
 	}
 }
