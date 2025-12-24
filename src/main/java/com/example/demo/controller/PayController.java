@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.model.PaymentResponseDTO;
 import com.example.demo.service.PayService;
 
 @RestController
@@ -17,8 +18,8 @@ public class PayController {
 	
 	
 	@PostMapping("/pay")
-	public String processPayment(@RequestBody  String payId) {
-	return 	payService.processPayment(payId);
+	public PaymentResponseDTO processPayment(@RequestBody  PaymentRequestDTO paymentRequestDTO) {
+	return 	payService.processPayment(paymentRequestDTO);
 	}
 	
 	@PostMapping("/paymnetRefund")
